@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer';
 
 import { safeLaunchOptions } from '@uifabric/build/puppeteer/puppeteer.config';
 import { E2EApi } from './e2eApi';
-import { attach, testEnd } from '@testim/screenplay';
+import { attach, testEnd } from '@testim/screenplay/dist';
 
 // @ts-ignore
 jasmine.getEnv().addReporter({
