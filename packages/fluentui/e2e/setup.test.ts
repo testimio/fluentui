@@ -3,7 +3,6 @@ import puppeteer from 'puppeteer';
 import { safeLaunchOptions } from '@uifabric/build/puppeteer/puppeteer.config';
 import { E2EApi } from './e2eApi';
 import { attach, testEnd } from '@testim/screenplay';
-import * as ScreenplayJestReporter from 'screenplay-jest-integration/src/ScreenplayJestReporter';
 
 // @ts-ignore
 jasmine.getEnv().addReporter({

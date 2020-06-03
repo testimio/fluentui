@@ -8,4 +8,5 @@ module.exports = {
   name: 'e2e',
   testRegex: '.*-test\\.tsx?$',
   setupFilesAfterEnv: ['./setup.test.ts'],
+  reporters: ['default', ['screenplay-jest-integration/src/ScreenplayJestReporter', { rootDir: process.cwd() }]],
 };
