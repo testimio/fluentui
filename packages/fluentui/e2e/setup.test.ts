@@ -55,6 +55,7 @@ beforeEach(async () => {
 afterEach(async () => {
   // @ts-ignore
   const testEndStatus =
+    // @ts-ignore
     jasmine.currentTest.failedExpectations.length > 0
       ? // @ts-ignore
         ({ success: false, error: jasmine.currentTest.failedExpectations[0] } as const)
