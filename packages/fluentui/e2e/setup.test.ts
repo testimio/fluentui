@@ -57,10 +57,18 @@ afterEach(async () => {
   const testEndStatus =
     // @ts-ignore
     jasmine.currentTest.failedExpectations.length > 0
-      ? // @ts-ignore
-        ({ success: false, error: jasmine.currentTest.failedExpectations[0] } as const)
-      : // @ts-ignore
-        ({ success: true, data: jasmine.currentTest.passedExpectations } as const);
+      ? ({
+          success: false,
+          error:
+            // @ts-ignore
+            jasmine.currentTest.failedExpectations[0],
+        } as const)
+      : ({
+          success: true,
+          data:
+            // @ts-ignore
+            jasmine.currentTest.passedExpectations,
+        } as const);
   await testEnd(wrappedPage as any, testEndStatus);
 
   await page.close();
