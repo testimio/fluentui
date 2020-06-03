@@ -2,11 +2,22 @@ import puppeteer from 'puppeteer';
 
 import { safeLaunchOptions } from '@uifabric/build/puppeteer/puppeteer.config';
 import { E2EApi } from './e2eApi';
+import { attach, testEnd } from '@testim/screenplay';
+import * as ScreenplayJestReporter from 'screenplay-jest-integration/src/ScreenplayJestReporter';
+
+// @ts-ignore
+jasmine.getEnv().addReporter({
+  // @ts-ignore
+  specStarted: result => (jasmine.currentTest = result),
+  // @ts-ignore
+  specDone: result => (jasmine.currentTest = result),
+});
 
 jest.setTimeout(10000);
 
 let browser: puppeteer.Browser;
 let page: puppeteer.Page;
+let wrappedPage: puppeteer.Page;
 let consoleErrors: string[] = [];
 
 const launchOptions: puppeteer.LaunchOptions = safeLaunchOptions({
@@ -22,18 +33,35 @@ beforeAll(async () => {
 beforeEach(async () => {
   page = await browser.newPage();
 
+  wrappedPage = attach(page as any, {
+    noResultsServer: true,
+    // we use full name to try and avoid collisions
+    // @ts-ignore
+    externalTestName: jasmine.currentTest.fullName.replace(/ /g, '_'),
+    // externalTestName: fullTestNameToSlug(jasmine.currentTest.description),
+    resultsDirectory: process.cwd(),
+  }) as any;
   // setup console errors detection
   consoleErrors = [];
-  page.on('console', message => {
+  wrappedPage.on('console', message => {
     if (message.type() === 'error') {
       consoleErrors.push(message.text());
     }
   });
 
-  global['e2e'] = new E2EApi(page);
+  global['e2e'] = new E2EApi(wrappedPage);
 });
 
 afterEach(async () => {
+  // @ts-ignore
+  const testEndStatus =
+    jasmine.currentTest.failedExpectations.length > 0
+      ? // @ts-ignore
+        ({ success: false, error: jasmine.currentTest.failedExpectations[0] } as const)
+      : // @ts-ignore
+        ({ success: true, data: jasmine.currentTest.passedExpectations } as const);
+  await testEnd(wrappedPage as any, testEndStatus);
+
   await page.close();
   expect(consoleErrors).toEqual([]);
 
