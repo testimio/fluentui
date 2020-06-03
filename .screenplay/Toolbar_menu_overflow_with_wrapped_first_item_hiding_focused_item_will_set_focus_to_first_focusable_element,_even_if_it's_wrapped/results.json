@@ -1,0 +1,276 @@
+{
+  "metadata": {
+    "systemInfo": {
+      "pageViewport": {
+        "width": 800,
+        "height": 600
+      },
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/76.0.3803.0 Safari/537.36",
+      "browserVersion": "HeadlessChrome/76.0.3803.0",
+      "modelName": "MacBookPro",
+      "modelVersion": "11.3",
+      "browserPlatform": "MacIntel"
+    }
+  },
+  "steps": [
+    {
+      "index": 1,
+      "startTimestamp": 1591218993385,
+      "screenshot": "1.page-goto.png",
+      "consoleEntries": [
+        {
+          "level": "log",
+          "text": "Injected log for:  goto",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591218993409
+        },
+        {
+          "level": "info",
+          "text": "%cDownload the React DevTools for a better development experience: https://fb.me/react-devtools font-weight:bold",
+          "line": 21257,
+          "column": 16,
+          "url": "webpack-internal:///./node_modules/react-dom/cjs/react-dom.development.js",
+          "timestamp": 1591218993991
+        },
+        {
+          "level": "warning",
+          "text": "@fluentui/react-northstar: CSSinJS Debug data collection is disabled. To enable data collection paste `window.localStorage.fluentUIDebug = true` to your browser console and reload the page.",
+          "line": 16,
+          "column": 18,
+          "url": "webpack-internal:///./packages/fluentui/styles/src/debugEnabled.ts",
+          "timestamp": 1591218994031
+        },
+        {
+          "level": "warning",
+          "text": "@fluentui/react-northstar: You are running Fela in production mode. This limits your ability to edit styles in browsers development tools. To enable development mode please paste `window.localStorage.felaDevMode = true` to your browsers console and reload the page.",
+          "line": 40,
+          "column": 12,
+          "url": "webpack-internal:///./packages/fluentui/react-northstar/src/utils/felaRenderer.tsx",
+          "timestamp": 1591218994088
+        }
+      ],
+      "unhandledExceptions": [
+        {
+          "message": "Error: Injected error for: goto\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591218993421
+        }
+      ],
+      "fnName": "goto",
+      "text": "http://localhost:8082/toolbar-menu-overflow-wrapped",
+      "endTimestamp": 1591218994735,
+      "name": "goto \"http://localhost:8082/toolbar-menu-overflow-wrapped\""
+    },
+    {
+      "index": 2,
+      "startTimestamp": 1591218994736,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 800,
+        "height": 32,
+        "top": 0,
+        "right": 800,
+        "bottom": 32,
+        "left": 0,
+        "screenWidth": 800,
+        "screenHeight": 600,
+        "devicePixelRatio": 1
+      },
+      "screenshot": "2.page-waitForSelector.png",
+      "consoleEntries": [
+        {
+          "level": "log",
+          "text": "Injected log for:  waitForSelector",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591218994761
+        }
+      ],
+      "unhandledExceptions": [
+        {
+          "message": "Error: Injected error for: waitForSelector\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591218994774
+        }
+      ],
+      "selector": ".ui-toolbar",
+      "fnName": "waitForSelector",
+      "endTimestamp": 1591218995112,
+      "name": "waitForSelector \".ui-toolbar\""
+    },
+    {
+      "index": 3,
+      "startTimestamp": 1591218995112,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 32,
+        "height": 32,
+        "top": 0,
+        "right": 32,
+        "bottom": 32,
+        "left": 0,
+        "screenWidth": 800,
+        "screenHeight": 600,
+        "devicePixelRatio": 1
+      },
+      "screenshot": "3.page-waitForSelector.png",
+      "consoleEntries": [
+        {
+          "level": "log",
+          "text": "Injected log for:  waitForSelector",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591218995138
+        }
+      ],
+      "unhandledExceptions": [
+        {
+          "message": "Error: Injected error for: waitForSelector\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591218995149
+        }
+      ],
+      "selector": ".ui-toolbar__item:nth-child(1)",
+      "fnName": "waitForSelector",
+      "endTimestamp": 1591218995497,
+      "name": "waitForSelector \".ui-toolbar__item:nth-child(1)\""
+    },
+    {
+      "index": 4,
+      "startTimestamp": 1591218995511,
+      "rect": {
+        "x": 331.078125,
+        "y": 0,
+        "width": 32,
+        "height": 32,
+        "top": 0,
+        "right": 363.078125,
+        "bottom": 32,
+        "left": 331.078125,
+        "screenWidth": 800,
+        "screenHeight": 600,
+        "devicePixelRatio": 1
+      },
+      "screenshot": "4.page-waitForSelector.png",
+      "consoleEntries": [
+        {
+          "level": "log",
+          "text": "Injected log for:  waitForSelector",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591218995537
+        }
+      ],
+      "unhandledExceptions": [
+        {
+          "message": "Error: Injected error for: waitForSelector\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591218995548
+        }
+      ],
+      "selector": ".ui-toolbar__item:nth-child(10)",
+      "fnName": "waitForSelector",
+      "endTimestamp": 1591218995881,
+      "name": "waitForSelector \".ui-toolbar__item:nth-child(10)\""
+    },
+    {
+      "index": 5,
+      "startTimestamp": 1591218995930,
+      "screenshot": "5.page-evaluate.png",
+      "consoleEntries": [
+        {
+          "level": "log",
+          "text": "Injected log for:  evaluate",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591218995953
+        }
+      ],
+      "unhandledExceptions": [
+        {
+          "message": "Error: Injected error for: evaluate\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591218995968
+        }
+      ],
+      "fnName": "evaluate",
+      "endTimestamp": 1591218996232,
+      "name": "evaluate"
+    },
+    {
+      "index": 7,
+      "startTimestamp": 1591218996234,
+      "screenshot": "7.page-viewport.png",
+      "consoleEntries": [
+        {
+          "level": "log",
+          "text": "Injected log for:  viewport",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591218996261
+        },
+        {
+          "level": "log",
+          "text": "Injected log for:  setViewport",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591218996261
+        }
+      ],
+      "unhandledExceptions": [
+        {
+          "message": "Error: Injected error for: viewport\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591218996275
+        },
+        {
+          "message": "Error: Injected error for: setViewport\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591218996275
+        }
+      ],
+      "fnName": "viewport",
+      "endTimestamp": 1591218996518,
+      "name": "viewport"
+    },
+    {
+      "index": 9,
+      "startTimestamp": 1591218996781,
+      "screenshot": "9.page-viewport.png",
+      "consoleEntries": [
+        {
+          "level": "log",
+          "text": "Injected log for:  viewport",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591218996807
+        },
+        {
+          "level": "log",
+          "text": "Injected log for:  setViewport",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591218996807
+        }
+      ],
+      "unhandledExceptions": [
+        {
+          "message": "Error: Injected error for: viewport\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591218996820
+        },
+        {
+          "message": "Error: Injected error for: setViewport\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591218996821
+        }
+      ],
+      "fnName": "viewport",
+      "endTimestamp": 1591218997047,
+      "name": "viewport"
+    }
+  ]
+}

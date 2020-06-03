@@ -32,17 +32,17 @@ beforeAll(async () => {
 beforeEach(async () => {
   page = await browser.newPage();
 
-  wrappedPage = attach(page as any, {
+  wrappedPage = (await attach(page as any, {
     noResultsServer: true,
     // we use full name to try and avoid collisions
     // @ts-ignore
     externalTestName: jasmine.currentTest.fullName.replace(/ /g, '_'),
     // externalTestName: fullTestNameToSlug(jasmine.currentTest.description),
     resultsDirectory: process.cwd(),
-  }) as any;
+  })) as any;
   // setup console errors detection
   consoleErrors = [];
-  wrappedPage.on('console', message => {
+  page.on('console', message => {
     if (message.type() === 'error') {
       consoleErrors.push(message.text());
     }

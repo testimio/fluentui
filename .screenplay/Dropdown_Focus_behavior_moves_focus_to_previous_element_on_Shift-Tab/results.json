@@ -1,0 +1,502 @@
+{
+  "metadata": {
+    "systemInfo": {
+      "pageViewport": {
+        "width": 800,
+        "height": 600
+      },
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/76.0.3803.0 Safari/537.36",
+      "browserVersion": "HeadlessChrome/76.0.3803.0",
+      "modelName": "MacBookPro",
+      "modelVersion": "11.3",
+      "browserPlatform": "MacIntel"
+    }
+  },
+  "steps": [
+    {
+      "index": 1,
+      "startTimestamp": 1591219211587,
+      "screenshot": "1.page-goto.png",
+      "consoleEntries": [
+        {
+          "level": "log",
+          "text": "Injected log for:  goto",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219211610
+        },
+        {
+          "level": "info",
+          "text": "%cDownload the React DevTools for a better development experience: https://fb.me/react-devtools font-weight:bold",
+          "line": 21257,
+          "column": 16,
+          "url": "webpack-internal:///./node_modules/react-dom/cjs/react-dom.development.js",
+          "timestamp": 1591219212143
+        },
+        {
+          "level": "warning",
+          "text": "@fluentui/react-northstar: CSSinJS Debug data collection is disabled. To enable data collection paste `window.localStorage.fluentUIDebug = true` to your browser console and reload the page.",
+          "line": 16,
+          "column": 18,
+          "url": "webpack-internal:///./packages/fluentui/styles/src/debugEnabled.ts",
+          "timestamp": 1591219212167
+        },
+        {
+          "level": "warning",
+          "text": "@fluentui/react-northstar: You are running Fela in production mode. This limits your ability to edit styles in browsers development tools. To enable development mode please paste `window.localStorage.felaDevMode = true` to your browsers console and reload the page.",
+          "line": 40,
+          "column": 12,
+          "url": "webpack-internal:///./packages/fluentui/react-northstar/src/utils/felaRenderer.tsx",
+          "timestamp": 1591219212223
+        }
+      ],
+      "unhandledExceptions": [
+        {
+          "message": "Error: Injected error for: goto\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219211625
+        }
+      ],
+      "fnName": "goto",
+      "text": "http://localhost:8082/dropdown-move-focus-on-tab",
+      "endTimestamp": 1591219212566,
+      "name": "goto \"http://localhost:8082/dropdown-move-focus-on-tab\""
+    },
+    {
+      "index": 2,
+      "startTimestamp": 1591219212567,
+      "rect": {
+        "x": 0,
+        "y": 20,
+        "width": 324,
+        "height": 32,
+        "top": 20,
+        "right": 324,
+        "bottom": 52,
+        "left": 0,
+        "screenWidth": 800,
+        "screenHeight": 600,
+        "devicePixelRatio": 1
+      },
+      "screenshot": "2.page-waitForSelector.png",
+      "consoleEntries": [
+        {
+          "level": "log",
+          "text": "Injected log for:  waitForSelector",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219212591
+        }
+      ],
+      "unhandledExceptions": [
+        {
+          "message": "Error: Injected error for: waitForSelector\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219212603
+        }
+      ],
+      "selector": ".ui-dropdown__trigger-button",
+      "fnName": "waitForSelector",
+      "endTimestamp": 1591219212949,
+      "name": "waitForSelector \".ui-dropdown__trigger-button\""
+    },
+    {
+      "index": 3,
+      "startTimestamp": 1591219212950,
+      "rect": {
+        "x": 0,
+        "y": 20,
+        "width": 324,
+        "height": 32,
+        "top": 20,
+        "right": 324,
+        "bottom": 52,
+        "left": 0,
+        "screenWidth": 800,
+        "screenHeight": 600,
+        "devicePixelRatio": 1
+      },
+      "screenshot": "3.page-waitForSelector.png",
+      "consoleEntries": [
+        {
+          "level": "log",
+          "text": "Injected log for:  waitForSelector",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219212975
+        }
+      ],
+      "unhandledExceptions": [
+        {
+          "message": "Error: Injected error for: waitForSelector\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219212987
+        }
+      ],
+      "selector": ".ui-dropdown__trigger-button",
+      "fnName": "waitForSelector",
+      "endTimestamp": 1591219213332,
+      "name": "waitForSelector \".ui-dropdown__trigger-button\""
+    },
+    {
+      "index": 4,
+      "startTimestamp": 1591219213424,
+      "screenshot": "4.keyboard-press.png",
+      "consoleEntries": [
+        {
+          "level": "log",
+          "text": "Injected log for:  press",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219213448
+        },
+        {
+          "level": "log",
+          "text": "Injected log for:  press",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219213448
+        }
+      ],
+      "unhandledExceptions": [
+        {
+          "message": "Error: Injected error for: press\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219213460
+        },
+        {
+          "message": "Error: Injected error for: press\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219213460
+        }
+      ],
+      "fnName": "press",
+      "endTimestamp": 1591219213786,
+      "name": "press"
+    },
+    {
+      "index": 5,
+      "startTimestamp": 1591219213850,
+      "screenshot": "5.keyboard-down.png",
+      "consoleEntries": [
+        {
+          "level": "log",
+          "text": "Injected log for:  down",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219213874
+        },
+        {
+          "level": "log",
+          "text": "Injected log for:  down",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219213874
+        },
+        {
+          "level": "log",
+          "text": "Injected log for:  down",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219213874
+        }
+      ],
+      "unhandledExceptions": [
+        {
+          "message": "Error: Injected error for: down\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219213885
+        },
+        {
+          "message": "Error: Injected error for: down\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219213885
+        },
+        {
+          "message": "Error: Injected error for: down\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219213885
+        }
+      ],
+      "fnName": "down",
+      "endTimestamp": 1591219214140,
+      "name": "down"
+    },
+    {
+      "index": 6,
+      "startTimestamp": 1591219214200,
+      "screenshot": "6.keyboard-press.png",
+      "consoleEntries": [
+        {
+          "level": "log",
+          "text": "Injected log for:  press",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219214226
+        },
+        {
+          "level": "log",
+          "text": "Injected log for:  press",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219214226
+        },
+        {
+          "level": "log",
+          "text": "Injected log for:  press",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219214226
+        },
+        {
+          "level": "log",
+          "text": "Injected log for:  press",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219214226
+        }
+      ],
+      "unhandledExceptions": [
+        {
+          "message": "Error: Injected error for: press\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219214237
+        },
+        {
+          "message": "Error: Injected error for: press\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219214237
+        },
+        {
+          "message": "Error: Injected error for: press\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219214237
+        },
+        {
+          "message": "Error: Injected error for: press\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219214237
+        }
+      ],
+      "fnName": "press",
+      "endTimestamp": 1591219214537,
+      "name": "press"
+    },
+    {
+      "index": 7,
+      "startTimestamp": 1591219214601,
+      "screenshot": "7.keyboard-up.png",
+      "consoleEntries": [
+        {
+          "level": "log",
+          "text": "Injected log for:  up",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219214625
+        },
+        {
+          "level": "log",
+          "text": "Injected log for:  up",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219214625
+        },
+        {
+          "level": "log",
+          "text": "Injected log for:  up",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219214625
+        },
+        {
+          "level": "log",
+          "text": "Injected log for:  up",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219214625
+        },
+        {
+          "level": "log",
+          "text": "Injected log for:  up",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219214625
+        }
+      ],
+      "unhandledExceptions": [
+        {
+          "message": "Error: Injected error for: up\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219214637
+        },
+        {
+          "message": "Error: Injected error for: up\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219214637
+        },
+        {
+          "message": "Error: Injected error for: up\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219214637
+        },
+        {
+          "message": "Error: Injected error for: up\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219214637
+        },
+        {
+          "message": "Error: Injected error for: up\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219214637
+        }
+      ],
+      "fnName": "up",
+      "endTimestamp": 1591219214877,
+      "name": "up"
+    },
+    {
+      "index": 8,
+      "startTimestamp": 1591219214878,
+      "screenshot": "8.page-evaluate.png",
+      "consoleEntries": [
+        {
+          "level": "log",
+          "text": "Injected log for:  evaluate",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219214903
+        },
+        {
+          "level": "log",
+          "text": "Injected log for:  evaluate",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219214903
+        },
+        {
+          "level": "log",
+          "text": "Injected log for:  evaluate",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219214903
+        },
+        {
+          "level": "log",
+          "text": "Injected log for:  evaluate",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219214903
+        },
+        {
+          "level": "log",
+          "text": "Injected log for:  evaluate",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219214903
+        }
+      ],
+      "unhandledExceptions": [
+        {
+          "message": "Error: Injected error for: evaluate\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219214917
+        },
+        {
+          "message": "Error: Injected error for: evaluate\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219214917
+        },
+        {
+          "message": "Error: Injected error for: evaluate\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219214917
+        },
+        {
+          "message": "Error: Injected error for: evaluate\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219214917
+        },
+        {
+          "message": "Error: Injected error for: evaluate\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219214917
+        }
+      ],
+      "fnName": "evaluate",
+      "endTimestamp": 1591219215162,
+      "name": "evaluate"
+    },
+    {
+      "index": 9,
+      "startTimestamp": 1591219215163,
+      "screenshot": "9.page-evaluate.png",
+      "consoleEntries": [
+        {
+          "level": "log",
+          "text": "Injected log for:  evaluate",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219215187
+        },
+        {
+          "level": "log",
+          "text": "Injected log for:  evaluate",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219215187
+        },
+        {
+          "level": "log",
+          "text": "Injected log for:  evaluate",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219215187
+        },
+        {
+          "level": "log",
+          "text": "Injected log for:  evaluate",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219215187
+        },
+        {
+          "level": "log",
+          "text": "Injected log for:  evaluate",
+          "line": 3,
+          "column": 24,
+          "url": "__puppeteer_evaluation_script__",
+          "timestamp": 1591219215187
+        }
+      ],
+      "unhandledExceptions": [
+        {
+          "message": "Error: Injected error for: evaluate\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219215199
+        },
+        {
+          "message": "Error: Injected error for: evaluate\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219215199
+        },
+        {
+          "message": "Error: Injected error for: evaluate\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219215199
+        },
+        {
+          "message": "Error: Injected error for: evaluate\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219215199
+        },
+        {
+          "message": "Error: Injected error for: evaluate\n    at __puppeteer_evaluation_script__:3:23",
+          "timestamp": 1591219215199
+        }
+      ],
+      "fnName": "evaluate",
+      "endTimestamp": 1591219215444,
+      "name": "evaluate"
+    }
+  ]
+}
