@@ -26,5 +26,8 @@
   "scripts": {
     "lint": "eslint --ext .js,.ts,.tsx .",
     "lint:fix": "yarn lint --fix"
+  },
+  "devDependencies": {
+    "@testim/screenplay": "^0.9.1"
   }
 }
