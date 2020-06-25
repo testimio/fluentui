@@ -10,7 +10,7 @@ module.exports = {
   name: 'e2e',
   testRegex: '.*-test\\.tsx?$',
   setupFilesAfterEnv: ['./setup.test.ts'],
-  reporters: ['default', ['@testim/screenplay/src/jest/reporter/RunConclusion.js', { runId }]],
+  reporters: [['@testim/screenplay/src/jest/reporter/default.js', { runId }]],
   globals: {
     runId,
   },

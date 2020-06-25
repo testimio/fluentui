@@ -3145,10 +3145,10 @@
     "@svgr/plugin-svgo" "^4.3.1"
     loader-utils "^1.2.3"
 
-"@testim/screenplay@^0.9.1":
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/@testim/screenplay/-/screenplay-0.9.1.tgz#eefa2bd1e652e612e4de91ba4ea6b93d535e894b"
-  integrity sha512-ia8JmYjrBY5DvIuRmvVOxxqIwFKF6lnYbJcucYWeSRGObeVs85Qh18o1AYdzLJFaAG0clmDNvAm6V5KtQqpWjQ==
+"@testim/screenplay@0.0.1-canary-publish-aca99db791824e3d41a247ba1e9edf406cb68702":
+  version "0.0.1-canary-publish-aca99db791824e3d41a247ba1e9edf406cb68702"
+  resolved "https://registry.yarnpkg.com/@testim/screenplay/-/screenplay-0.0.1-canary-publish-aca99db791824e3d41a247ba1e9edf406cb68702.tgz#898ae1f8fb9c4228eed32d12b04bf63418569d8c"
+  integrity sha512-nS4moy4t3URpQ8vKgeTUSvV29KGNxkjmZ17R8siIWnuuRljxOye6tDdsZqYkQYsKIT0/6eZnyMcsTXYq3VMurw==
   dependencies:
     abort-controller "^3.0.0"
     commander "^5.1.0"
