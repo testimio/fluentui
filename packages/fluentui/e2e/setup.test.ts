@@ -1,4 +1,5 @@
-import puppeteer from 'puppeteer';
+// import puppeteer from 'puppeteer';
+import playwright from 'playwright';
 
 import { safeLaunchOptions } from '@uifabric/build/puppeteer/puppeteer.config';
 import { E2EApi } from './e2eApi';
@@ -10,19 +11,19 @@ screenplayHelpers.registerJasmineReporterToGlobal();
 
 jest.setTimeout(10000);
 
-let browser: puppeteer.Browser;
-let page: puppeteer.Page;
+let browser: playwright.Browser;
+let page: playwright.Page;
 let endTest: EndTestFunction;
 let consoleErrors: string[] = [];
 
-const launchOptions: puppeteer.LaunchOptions = safeLaunchOptions({
+const launchOptions: playwright.LaunchOptions = safeLaunchOptions({
   headless: true,
   dumpio: false,
   slowMo: 10,
 });
 
 beforeAll(async () => {
-  browser = await puppeteer.launch(launchOptions);
+  browser = await playwright.chromium.launch(launchOptions);
 });
 
 beforeEach(async () => {
@@ -38,7 +39,12 @@ beforeEach(async () => {
 
   ({ page, endTest } = await screenplayHelpers.forBeforeEachGivenPage(originalPage));
 
-  global['e2e'] = new E2EApi(page);
+  // page.viewport = page.viewportSize();
+  // make like in puppeteer
+  page.constructor.prototype.viewport = page.constructor.prototype.viewportSize;
+  page.constructor.prototype.setViewport = page.constructor.prototype.setViewportSize;
+
+  global['e2e'] = new E2EApi(page as any);
 });
 
 afterEach(async () => {

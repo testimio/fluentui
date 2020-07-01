@@ -28,6 +28,7 @@
     "lint:fix": "yarn lint --fix"
   },
   "devDependencies": {
-    "@testim/screenplay": "0.0.1-canary-publish-aca99db791824e3d41a247ba1e9edf406cb68702"
+    "@testim/screenplay": "0.0.1-canary-publish-7f7c650548612dac05fe257b9b17828cd6f74eb7",
+    "playwright": "^1.1.1"
   }
 }
