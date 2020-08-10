@@ -22,7 +22,8 @@
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
-    "typescript": "3.7.2"
+    "typescript": "3.7.2",
+    "@testim/screenplay": "0.0.1-canary-publish-63199caca240cebc07a9f685cfc5d3ffbd3f35ec"
   },
   "publishConfig": {
     "access": "public"
