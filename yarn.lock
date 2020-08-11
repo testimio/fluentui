@@ -3679,10 +3679,10 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
-"@testim/screenplay@0.0.1-canary-publish-63199caca240cebc07a9f685cfc5d3ffbd3f35ec":
-  version "0.0.1-canary-publish-63199caca240cebc07a9f685cfc5d3ffbd3f35ec"
-  resolved "https://registry.yarnpkg.com/@testim/screenplay/-/screenplay-0.0.1-canary-publish-63199caca240cebc07a9f685cfc5d3ffbd3f35ec.tgz#91e35b6d679f47b95f1ffc6485cd68f3192d01b7"
-  integrity sha512-/lfxMzqD1Iy3EjN60reLWaYROGxqJ/s58+vzHuiWfeCLLsnaHFvcGT8U52htW3sn1i9XcW/Gpltb7+JYHkt05Q==
+"@testim/screenplay@0.0.1-canary-publish-18c2dfff5fc819be46338a3cb0884f42a8df3d06":
+  version "0.0.1-canary-publish-18c2dfff5fc819be46338a3cb0884f42a8df3d06"
+  resolved "https://registry.yarnpkg.com/@testim/screenplay/-/screenplay-0.0.1-canary-publish-18c2dfff5fc819be46338a3cb0884f42a8df3d06.tgz#162cfe4ec2e4808a2abc5aef1575d97aacdfaa05"
+  integrity sha512-x+mCvwE27HmY8BY7F7wH5VbkNeyXmFP2gX6c/ZaXzKlrbU8xVlB5Gah1wYnxnxQxKPXNuunquuTq9InjPaQeew==
   dependencies:
     abort-controller "^3.0.0"
     ajv "^6.12.3"

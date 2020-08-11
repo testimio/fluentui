@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "typescript": "3.7.2",
-    "@testim/screenplay": "0.0.1-canary-publish-63199caca240cebc07a9f685cfc5d3ffbd3f35ec"
+    "@testim/screenplay": "0.0.1-canary-publish-18c2dfff5fc819be46338a3cb0884f42a8df3d06"
   },
   "publishConfig": {
     "access": "public"
