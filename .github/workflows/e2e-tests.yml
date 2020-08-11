@@ -45,7 +45,7 @@ jobs:
       - run: yarn gulp test:e2e:build
 
       - name: Run tests
-        run: xvfb-run --auto-servernum WITH_SCREENPLAY=${{ matrix.withScreenplay }} yarn test:fluentui:e2e --skipBuild
+        run: WITH_SCREENPLAY=${{ matrix.withScreenplay }} xvfb-run --auto-servernum yarn test:fluentui:e2e --skipBuild
 
       - name: Cleanup xvfb pidx
         uses: bcomnes/cleanup-xvfb@v1
