@@ -15,12 +15,7 @@ jobs:
         node: [12]
         withScreenplay: ['0', '1']
 
-    name: Example ${{ matrix.folder }} on node ${{ matrix.node }}
-
-    defaults:
-      run:
-        shell: bash
-        working-directory: integration-examples/${{ matrix.folder }}
+    name: E2E test screenplay ${{ matrix.withScreenplay }} on node ${{ matrix.node }}
 
     steps:
       - uses: actions/checkout@v2
@@ -51,9 +46,10 @@ jobs:
 
       - name: Cleanup xvfb pidx
         uses: bcomnes/cleanup-xvfb@v1
-      # - name: Upload .screenplay dir
-      #   uses: actions/upload-artifact@v1
-      #   if: ${{ always() }}
-      #   with:
-      #     name: screenplay-${{ matrix.folder }}
-      #     path: integration-examples/${{ matrix.folder }}/.screenplay
+
+      - name: Upload .screenplay dir
+        uses: actions/upload-artifact@v2
+        if: ${{ always() }}
+        with:
+          name: screenplay-${{ matrix.withScreenplay }}
+          path: .screenplay
