@@ -36,10 +36,10 @@ beforeEach(async () => {
     }
   });
 
-  if ('NO_SCREENPLAY' in process.env) {
-    page = originalPage;
-  } else {
+  if ('WITH_SCREENPLAY' in process.env && process.env.WITH_SCREENPLAY === '1') {
     ({ page, endTest } = await screenplayHelpers.forBeforeEachGivenPage(originalPage));
+  } else {
+    page = originalPage;
   }
 
   global['e2e'] = new E2EApi(page);

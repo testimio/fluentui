@@ -1,0 +1,59 @@
+name: Run e2e tests
+
+on: [pull_request, push]
+
+jobs:
+  run-examples:
+    runs-on: ubuntu-18.04
+    # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idcontinue-on-error
+    continue-on-error: ${{ matrix.continueOnError }}
+
+    strategy:
+      matrix:
+        continueOnError: [true]
+        timeoutMinutes: [5]
+        node: [12]
+        withScreenplay: ['0', '1']
+
+    name: Example ${{ matrix.folder }} on node ${{ matrix.node }}
+
+    defaults:
+      run:
+        shell: bash
+        working-directory: integration-examples/${{ matrix.folder }}
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+
+      #   - run: pwd
+      #   - run: ls -al
+
+      - uses: microsoft/playwright-github-action@v1
+
+      - name: restore node modules cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            node_modules
+            */*/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('.github/workflows/*.yml') }}
+
+      - run: yarn install
+      - run: yarn gulp test:e2e:build
+
+      - name: Run tests
+        run: xvfb-run --auto-servernum WITH_SCREENPLAY=${{ matrix.withScreenplay }} yarn test:fluentui:e2e --skipBuild
+
+      - name: Cleanup xvfb pidx
+        uses: bcomnes/cleanup-xvfb@v1
+      # - name: Upload .screenplay dir
+      #   uses: actions/upload-artifact@v1
+      #   if: ${{ always() }}
+      #   with:
+      #     name: screenplay-${{ matrix.folder }}
+      #     path: integration-examples/${{ matrix.folder }}/.screenplay
