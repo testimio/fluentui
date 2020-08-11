@@ -36,13 +36,19 @@ beforeEach(async () => {
     }
   });
 
-  ({ page, endTest } = await screenplayHelpers.forBeforeEachGivenPage(originalPage));
+  if ('NO_SCREENPLAY' in process.env) {
+    page = originalPage;
+  } else {
+    ({ page, endTest } = await screenplayHelpers.forBeforeEachGivenPage(originalPage));
+  }
 
   global['e2e'] = new E2EApi(page);
 });
 
 afterEach(async () => {
-  await screenplayHelpers.forAfterEachEndTest(endTest);
+  if (endTest) {
+    await screenplayHelpers.forAfterEachEndTest(endTest);
+  }
   await page.close();
   expect(consoleErrors).toEqual([]);
 
