@@ -39,6 +39,8 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('.github/workflows/*.yml') }}
 
       - run: yarn install
+      # https://github.com/microsoft/fluentui/wiki/Setup#building
+      - run: yarn buildto office-ui-fabric-react
       - run: yarn gulp test:e2e:build
 
       - name: Run tests
