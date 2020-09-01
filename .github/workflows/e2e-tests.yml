@@ -1,0 +1,68 @@
+name: Run e2e tests
+
+on: [pull_request, push]
+
+jobs:
+  run-examples:
+    runs-on: ubuntu-18.04
+    # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idcontinue-on-error
+    continue-on-error: ${{ matrix.continueOnError }}
+
+    strategy:
+      matrix:
+        continueOnError: [true]
+        timeoutMinutes: [5]
+        node: [12]
+        benchmarkControlGroup: ['NO_ROOT_CAUSE', 'defaults', 'png', 'network logs', 'no console', 'no screenshots']
+
+    name: E2E test screenplay ${{ matrix.benchmarkControlGroup }} on node ${{ matrix.node }}
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+
+      #   - run: pwd
+      #   - run: ls -al
+
+      - uses: microsoft/playwright-github-action@v1
+
+      - name: restore node modules cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            node_modules
+            */*/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+
+      - run: yarn install
+      # https://github.com/microsoft/fluentui/wiki/Setup#building
+      - run: yarn build || true
+      - run: yarn buildto office-ui-fabric-react
+      - run: yarn gulp test:e2e:build
+
+      - name: Run tests
+        run: BENCHMARK_CONTROL_GROUP='${{ matrix.benchmarkControlGroup }}' xvfb-run --auto-servernum yarn test:fluentui:e2e --skipBuild
+
+      - name: list results
+        run: yarn root-cause ls
+
+      - name: persist
+        run: yarn root-cause persist $(cat .root-cause/history.json | node_modules/node-jq/bin/jq -r '.[0].runId')
+        working-directory: packages/fluentui/e2e
+        env:
+          TESTIM_PROJECT_TOKEN: ${{ secrets.TESTIM_TOKEN }}
+          TESTIM_PROJECT_ID: 1KzhoanyUYQUoIYLmldP
+
+      - name: Cleanup xvfb pidx
+        uses: bcomnes/cleanup-xvfb@v1
+
+      - name: Upload .root-cause dir
+        uses: actions/upload-artifact@v2
+        if: ${{ always() }}
+        with:
+          name: root-cause-${{ matrix.benchmarkControlGroup }}
+          path: packages/fluentui/e2e/.root-cause

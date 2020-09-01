@@ -71,9 +71,10 @@
     "cross-env": "^5.1.4",
     "danger": "^6.0.5",
     "gulp": "^4.0.2",
-    "lerna": "^3.15.0",
     "lage": "^0.19.0",
+    "lerna": "^3.15.0",
     "lint-staged": "^10.2.9",
+    "node-jq": "^1.11.2",
     "sass-loader": "^6.0.6",
     "satisfied": "^1.1.1",
     "syncpack": "^4.5.4"
@@ -96,7 +97,9 @@
       "packages/web-components/mocha",
       "packages/web-components/mocha/**",
       "packages/web-components/webpack",
-      "packages/web-components/webpack/**"
+      "packages/web-components/webpack/**",
+      "**/node-jq/**",
+      "**/node-jq"
     ]
   },
   "resolutions": {
