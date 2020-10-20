@@ -16,7 +16,7 @@ jobs:
         benchmarkControlGroup:
           ['NO_ROOT_CAUSE', 'defaults', 'png', 'network logs', 'no console', 'no screenshots', 'html']
 
-    name: E2E test screenplay ${{ matrix.benchmarkControlGroup }} on node ${{ matrix.node }}
+    name: E2E test Root Cause ${{ matrix.benchmarkControlGroup }} on node ${{ matrix.node }}
 
     steps:
       - uses: actions/checkout@v2

@@ -6,7 +6,7 @@ import { E2EApi } from './e2eApi';
 import * as rootCauseHelpers from '@testim/root-cause-jest/lib/helpers';
 import { EndTestFunction } from '@testim/root-cause-core';
 
-rootCauseHelpers.registerJasmineReporterToGlobal();
+rootCauseHelpers.ensurePrerequisite();
 
 jest.setTimeout(10000);
 
