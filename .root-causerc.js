@@ -29,6 +29,12 @@ switch (process.env.BENCHMARK_CONTROL_GROUP) {
     };
     break;
 
+  case 'html':
+    config.features = {
+      html: true,
+    };
+    break;
+
   case 'defaults':
     break;
 }

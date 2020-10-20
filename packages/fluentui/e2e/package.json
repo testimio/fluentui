@@ -22,7 +22,7 @@
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
-    "@testim/root-cause-jest": "^0.1.14",
+    "@testim/root-cause-jest": "^0.1.25",
     "gulp": "^4.0.2",
     "node-jq": "^1.11.2",
     "typescript": "3.7.2"
